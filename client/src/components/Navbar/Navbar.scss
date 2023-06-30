@@ -1,0 +1,177 @@
+.navbar{
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    // margin-bottom: 70px;
+    z-index: 999;
+    background-color: white;
+    
+    box-shadow: rgba(255, 158, 158, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    .wrapper{
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .wrap{
+            display: flex;
+            gap: 20px;
+
+            .icons{
+                display: flex;
+                gap: 15px;
+                color: #777;
+                cursor: pointer;
+
+                .cartIcon{
+                    position: relative;
+                    span{
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: #2879fe;
+                        color: white;
+                        position: absolute;
+                        right: -10px;
+                        top: -10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+        
+                    }
+                }
+            }
+
+        }
+
+       
+
+
+        .hamburger{
+            display: none;
+            cursor: pointer;
+            @media (max-width:844px){
+                display: block;
+            }
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            @media (max-width:844px){
+                display: none;
+            }
+           
+            .item1{
+                font-size: 18px;
+                
+                &:hover{
+                    color: blue;
+                }
+            }
+            .item2{
+                font-size: 18px;
+
+                &:hover{
+                    color: blue;
+                }
+            }
+            .item3{
+                font-size: 18px;
+
+                &:hover{
+                    color: blue;
+                }
+            }
+            .item4{
+                font-size: 18px;
+
+                &:hover{
+                    color: blue;
+                }
+            }
+        }
+        .center{
+            font-size: 30px;
+            letter-spacing: 2px;
+            @media (max-width:844px){
+                font-size: 20px;
+                text-align: left;
+                margin-left: 0;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            @media (max-width:844px){
+                display: none;
+            }
+            
+            .item1{
+                font-size: 18px;
+                
+                &:hover{
+                    color: blue;
+                }
+            }
+            .item2{
+                font-size: 18px;
+
+                &:hover{
+                    color: blue;
+                }
+            }
+            .item3{
+                font-size: 18px;
+
+                &:hover{
+                    color: blue;
+                }
+            }
+            
+        }
+         
+        .mobile{
+            z-index: 999;
+            display: flex;
+            border-radius: 5px;
+            position: absolute;
+            flex-direction: column;
+            width: fit-content;
+            gap: 10px;
+            color: black;
+            padding: 20px;
+            background-color: white;
+            transition: all .5s ease-in-out;
+            font-weight: bold;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            .line{
+                border: 1px solid black;
+                width: 65%;
+            }
+        }
+
+        
+
+        .mobile.inactive{
+            right: -45vw;
+            top: 80px;
+        }
+
+        .mobile.active{
+            right: 0;
+            top: 80px;
+        }
+    }
+
+
+}

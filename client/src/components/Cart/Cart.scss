@@ -1,0 +1,141 @@
+.cart{
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    z-index: 999;
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    
+
+    @media (max-width:844px){
+        width: 200px;
+                
+    }
+
+    h1{
+        margin-bottom:30px ;
+        color: gray;
+        font-weight: 400;
+        font-size: 24px;
+        @media (max-width:844px){
+            font-size: 18px;
+                
+        }
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        .details{
+
+            h1{
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 0px;
+                @media (max-width:844px){
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                
+                
+                }
+            }
+
+            p{
+                margin-bottom: 10px;
+                color: gray;
+                font-size: 14px;
+                @media (max-width:844px){
+                    display: none;
+                }
+            }
+
+            .price{
+                color: #2879fe;
+            }
+        }
+
+        .delete{
+            color:red;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 5px;
+
+            &:hover{
+                background-color:rgba(255, 0, 0, 0.107);
+            }
+        }
+        img{
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            @media (max-width:844px){
+                width: 40px;
+                height: 50px;
+                
+                
+            }
+            
+        }
+    }
+
+    .total{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    button{
+        width: 250px;
+        padding: 10px;
+        background-color: #2879fe;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 20px;
+        @media (max-width:844px){
+            width: 185px;
+            font-size: 10px;
+                
+                
+        }
+
+        &:hover{
+            background-color: #287afe99 ;
+        }
+    }
+    
+
+    .reset{
+        color: red;
+        padding: 9px;
+        font-size: 12px;
+        border: 2px solid red;
+        cursor: pointer;
+        border-radius: 20px;
+        text-align: center;
+        @media (max-width:844px){
+            
+            width: 500px;
+            
+            font-size: 10px; 
+        }
+
+        &:hover{
+            background-color: rgba(255, 0, 0, 0.107);
+        }
+
+    }
+    
+}

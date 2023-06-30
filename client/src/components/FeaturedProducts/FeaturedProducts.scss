@@ -1,0 +1,38 @@
+.featuredProducts{    
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        z-index: 3;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+         
+        h1{
+            flex: 2;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 46px;
+            @media (max-width:844px){
+                font-size: 26px;
+            }
+        }
+
+        p{
+            flex:3;
+            color: gray;
+        }
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: center;
+        background-color: #f2f2f3;  
+        padding-top: 20px;
+        flex-wrap: wrap;
+        gap: 50px;
+
+    }
+
+}

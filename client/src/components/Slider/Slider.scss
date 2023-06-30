@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+.slider{
+    @media (max-width:844px){
+        
+    }
+    .mobile{
+        position: relative;
+        display: none;
+        .slogan{
+            position: absolute;
+            display: flex;
+            width: fit-content;
+            left: 0;
+            right: 0;
+            padding: 3px;
+            margin: 10% auto;
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(255, 255, 255);
+            font-family: monospace;
+            justify-content: center;
+            align-items: center;
+
+            h1{
+                margin: 0;
+                padding: 2px;
+            }
+        }
+        .container{
+            height: 50vh;
+            
+            img{
+                height: 50vh;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width:844px){
+            display: block;
+        }
+    }
+
+
+    .desktop{
+        height: calc(100vh - 80px);
+        width: 100vw;
+        position: relative;
+        overflow: hidden;
+
+        @media (max-width:844px){
+            display: none;
+        }
+    
+
+        .slogan{
+            position: absolute;
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            top: calc((100vh - 80px)/3);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            color: rgb(255, 255, 255);
+            border: 5px solid white;
+            font-weight: bold;
+            padding: 40px;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            z-index: 2;
+        }
+    
+        
+        
+        .container{
+            width: 300vw;
+            display: flex;
+            height: 100%;
+            
+            transition: all 1s ease;
+    
+            img{
+                width: 100vw;
+                height: 100%;
+                object-fit: cover;   
+            }
+        }
+    
+        .icons{
+            width: fit-content;
+            display: flex;
+            position: absolute;
+            left: 0;
+            right: 0;
+            color: black;
+            bottom: 100px;
+            gap: 10px;
+            margin: auto;
+    
+            .icon{
+                width: 50px;
+                height: 50px;
+                border: 3px solid rgb(0, 0, 0);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+}
