@@ -34,9 +34,7 @@ const AboutView = ({id}) => {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"alt='' />
                         </div>
                         <div className="image">
-                            
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt=''/>
-          
                         </div>
                         
                     </div>
@@ -57,7 +55,6 @@ const AboutView = ({id}) => {
                         </div>
                     </div>
                 </div>
-               
             </div>
         }
         {id === '2' && 
@@ -73,11 +70,7 @@ const AboutView = ({id}) => {
                     <h1>Please feel free to contact me by the means below.</h1>
                     <h2>Email: hazbounelias96@gmail.com</h2>
                     <h2>Phone: (252)-469-8517</h2>
-
-
                 </div>
-
-
                 <span className='icons'>
                     <Link to='https://www.linkedin.com/in/elias-hazboun-5b6a0717a/' target='_blank' >
                         <LinkedInIcon className='icon'/>

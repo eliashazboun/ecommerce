@@ -5,7 +5,7 @@ const useFetch =(url)=>{
 
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,10 +18,12 @@ const useFetch =(url)=>{
                 setError(true)
             }
             setLoading(false)
+            
         };
         fetchData()
-    
+        
     }, [url]);
+    
 
     return {data, loading, error}
 };

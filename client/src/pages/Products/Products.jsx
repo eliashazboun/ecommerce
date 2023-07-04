@@ -4,6 +4,8 @@ import List from '../../components/List/List'
 import './Products.scss'
 import useFetch from '../../hooks/useFetch'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { useTimeout } from 'usehooks-ts'
+
 
 
 const Products = () => {
@@ -13,7 +15,7 @@ const Products = () => {
   const [selectedSubCategory, setSelectedSubCategory] = useState([])
   const [open, setOpen] = useState(false)
 
-  const {data, loading, error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
+  const {data, loading, error} = useFetch(`/sub-categories?populate=*&[filters][categories][id][$eq]=${catId}`);
   const category = useFetch(`/categories?populate=*&[filters][id][$eq]=${catId}`);
 
   const handleOpen = () => {
@@ -26,9 +28,6 @@ const Products = () => {
     setSelectedSubCategory(isChecked ? [...selectedSubCategory, value] : selectedSubCategory.filter((item) => item !== value))
   }
 
-
-  
-
   return (
     <div className='products'>
       <div className="wrap">
@@ -40,14 +39,14 @@ const Products = () => {
           </div>
           </span>
           <div className="filterItem">
-            {category.loading ? "Loading...." : <h1>{category.data[0].attributes.title}</h1>}
+            {/* {category.data && (<h1>{category.data[0].attributes.title}</h1>)} */}
             <h2>Product Categories</h2>
-            {data?.map((item) => (
-            <div className="inputItem" key={item.id}>
+            {/* {data && (data.map((item) => (
+              <div className="inputItem" key={item.id}>
               <input type="checkbox" id={item.id} value={item.id} onChange={handleChange}/>
               <label htmlFor={item.id}>{item.attributes.title}</label>
-            </div>
-            ))}
+              </div>
+            )))} */}
           </div>
           <div className="filterItem">
             <h2>Filter by price</h2>
@@ -74,7 +73,8 @@ const Products = () => {
       </div>
 
       <div className="right">
-        {category.loading ? "Loading..." :<img className='catImg' src={process.env.REACT_APP_UPLOAD_URL + category.data[0].attributes.img.data.attributes.url } alt="" />}
+        {console.log(category)}
+        {/* {category.data && (<img className='catImg' src={process.env.REACT_APP_UPLOAD_URL + category.data[0].attributes.img.data.attributes.url } alt="" />)} */}
         <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCategory}/>
       </div>
     </div>

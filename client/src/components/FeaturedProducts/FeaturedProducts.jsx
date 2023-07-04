@@ -14,9 +14,8 @@ const FeaturedProducts = ({type}) => {
             
         </div>
         <div className="bottom">
-            {error ? "Something went horribly wrong" :(loading 
-                ? "loading" 
-                : data.map((item) => <Card item={item} key={item.id}/>))}
+            {console.log(loading,error)}
+            {error ? "Something went horribly wrong" :(loading ? "loading" : data.map((item) => <Card item={item} key={item.id}/>))}
         </div>
 
     </div>

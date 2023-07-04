@@ -2,10 +2,10 @@
     width: 300px;
     display: flex;
     flex-direction: column;
-    // border: 1px solid black;
     border-radius: 0 0 10px 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     height: 300px;
+
     @media (max-width:844px){
         width: 125px;
         height: 175px;
@@ -17,18 +17,14 @@
         height: 300px;
         overflow: hidden;
         position: relative;
+
         @media (max-width:844px){
             height: 125px;
-            
-        }
-        
-
-        &:hover{
+        }&:hover{
             .secondImg{
                 opacity: 1;
                 transition: .5s ease-in;
             }
-
             .mainImg{
                 opacity: 0;
                 transition: .5s;
@@ -62,8 +58,6 @@
         }
     }
 
-   
-
     .prices{
         background-color: #e8e8e8;
         color: rgb(0, 0, 0);
@@ -72,6 +66,7 @@
         flex-direction: column;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         border-radius: 0 0 10px 10px;
+        
         @media (max-width:844px){
            border-radius: 0;
         }
